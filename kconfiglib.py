@@ -3351,7 +3351,7 @@ class _FileFeed(object):
 
     def __init__(self, filename):
         self.filename = filename
-        with open(filename) as f:
+        with open(filename, encoding='ISO-8859-1') as f:
             # No interleaving of I/O and processing yet. Don't know if it would
             # help.
             self.lines = f.readlines()
